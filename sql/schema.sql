@@ -7,6 +7,7 @@ CREATE TABLE student (
     last_name VARCHAR(50),
     email VARCHAR(255),
     department VARCHAR(100),
+    city VARCHAR(100),
     CONSTRAINT pk_student PRIMARY KEY (student_id)
 );
 
@@ -36,6 +37,7 @@ CREATE TABLE event (
     event_date DATE,
     location VARCHAR(150),
     capacity INTEGER,
+    category VARCHAR(50),
     CONSTRAINT pk_event PRIMARY KEY (event_id),
     CONSTRAINT fk_event_club
         FOREIGN KEY (club_id) REFERENCES club(club_id)
